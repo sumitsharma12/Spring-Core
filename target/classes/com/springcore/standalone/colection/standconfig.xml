@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xs
+      http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd"
+    >    
+    
+    <!-- Standalone List  -->
+    
+    
+    <util:list list-class="java.util.LinkedList" id="myfriends">
+    <value>sushant</value><value>shivji</value><value>snesh</value><value>Rahul</value><value>varun</value>
+    </util:list>
+    
+    <util:set set-class="java.util.HashSet" id="theyworks">
+    <value>studying</value><value>geting ready for job</value>
+    </util:set>
+    
+    <util:map map-class="java.util.LinkedHashMap" id="theirsalary" >
+    <entry key="1" value="nothing"/><entry key="2" value=" same nothing"/>
+    </util:map>
+    
+<util:properties id="theiraddress">
+<prop key="1">Delhi</prop><prop key="2">Bihar</prop>
+</util:properties>
+    
+<bean class="com.springcore.standalone.colection.Person" name="total">
+
+
+<property name="friends" ref="myfriends"/>
+
+
+<property name="works" ref="theyworks"/>
+
+
+<property name="Salary" ref="theirsalary"/>
+
+<property name="address" ref="theiraddress"/>
+
+
+</bean>
+
+    </beans>
+    
+    
+    
+    
